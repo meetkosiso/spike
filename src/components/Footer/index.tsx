@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { withTranslation, TFunction, useTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
@@ -26,7 +26,8 @@ interface SocialLinkProps {
   src: string;
 }
 
-const Footer = ({ t }: { t: TFunction }) => {
+const Footer = () => {
+  const { t } = useTranslation();
   const handleChange = (language: string) => {
     i18n.changeLanguage(language);
   };
@@ -164,4 +165,4 @@ const Footer = ({ t }: { t: TFunction }) => {
   );
 };
 
-export default withTranslation()(Footer);
+export default Footer;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import {  useTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
@@ -16,12 +16,15 @@ import {
   Span,
 } from "./styles";
 
-const Header = ({ t }: { t: TFunction }) => {
+const Header = () => {
+   const { t } = useTranslation();
   const [visible, setVisibility] = useState(false);
 
   const toggleButton = () => {
     setVisibility(!visible);
   };
+
+  const openLink = (url: string) => window.open(url)
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
@@ -32,26 +35,37 @@ const Header = ({ t }: { t: TFunction }) => {
       setVisibility(false);
     };
     return (
-      <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
-        >
-          <Span>
-            <Button>{t("Contact")}</Button>
-          </Span>
-        </CustomNavLinkSmall>
-      </>
-    );
+			<>
+				<CustomNavLinkSmall onClick={() => scrollTo("about")}>
+					<Span>{t("Tokenomics")}</Span>
+				</CustomNavLinkSmall>
+				<CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+					<Span>{t("About")}</Span>
+				</CustomNavLinkSmall>
+				<CustomNavLinkSmall
+					onClick={() => openLink("https://t.me/SpikeOfficialCTO")}
+				>
+					<Span>{t("Telegram")}</Span>
+				</CustomNavLinkSmall>
+				<CustomNavLinkSmall
+					onClick={() => openLink("https://x.com/SpikeFurie")}
+				>
+					<Span>{t("Twitter")}</Span>
+				</CustomNavLinkSmall>
+				<CustomNavLinkSmall
+					style={{ width: "180px" }}
+					onClick={() =>
+						openLink(
+							"https://app.uniswap.org/explore/tokens/ethereum/0x19848077f45356b21164c412eff3d3e4ff6ebc31"
+						)
+					}
+				>
+					<Span>
+						<Button>{t("Uniswap")}</Button>
+					</Span>
+				</CustomNavLinkSmall>
+			</>
+		);
   };
 
   return (
@@ -59,7 +73,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <SvgIcon src="spike-logo.svg" width="101px" height="64px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
@@ -86,4 +100,4 @@ const Header = ({ t }: { t: TFunction }) => {
   );
 };
 
-export default withTranslation()(Header);
+export default Header;

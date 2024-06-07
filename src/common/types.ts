@@ -15,12 +15,13 @@ export interface SvgIconProps {
   src: string;
   width: string;
   height: string;
+  onClick?: () => null;
 }
 
 export interface InputProps {
   name: string;
   placeholder: string;
-  t: TFunction;
+  // t: TFunction;
   type?: string;
   value?: string;
   onChange: (

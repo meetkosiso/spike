@@ -12,31 +12,31 @@ interface MiddleBlockProps {
 }
 
 const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+
+  const openLink = (url: string) => window.open(url)
+ 
   return (
-    <MiddleBlockSection>
-      <Slide direction="up" triggerOnce>
-        <Row justify="center" align="middle">
-          <ContentWrapper>
-            <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
-              {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
-                </Button>
-              )}
-            </Col>
-          </ContentWrapper>
-        </Row>
-      </Slide>
-    </MiddleBlockSection>
-  );
+		<MiddleBlockSection>
+			<Slide direction='up' triggerOnce>
+				<Row justify='center' align='middle'>
+					<ContentWrapper>
+						<Col lg={24} md={24} sm={24} xs={24}>
+							<h6>{t(title)}</h6>
+							<Content>{t(content)}</Content>
+							{button && (
+								<Button
+									name='submit'
+									onClick={() => openLink("https://t.me/SpikeOfficialCTO")}
+								>
+									{t(button)}
+								</Button>
+							)}
+						</Col>
+					</ContentWrapper>
+				</Row>
+			</Slide>
+		</MiddleBlockSection>
+	);
 };
 
 export default withTranslation()(MiddleBlock);

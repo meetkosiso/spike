@@ -32,6 +32,26 @@ export const ServiceWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
+  margin-bottom: 15px;
+`;
+
+export const ContractAddressContainer = styled("div")`
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+
+`;
+
+export const ContractAddress = styled("p")`
+	word-break: break-all;
+  text-align: center;
+`;
+
+export const ServiceWrapperContainer = styled("div")`
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+  align-items: center;
 `;
 
 export const MinTitle = styled("h6")`
@@ -59,4 +79,23 @@ export const ButtonWrapper = styled("div")`
   button:last-child {
     margin-left: 20px;
   }
+`;
+
+export const SocialButtonContainer = styled("div")`
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+`;
+
+
+export const SocialButton = styled("div")`
+	height: 75px;
+	width: 75px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+  cursor: pointer;
 `;
