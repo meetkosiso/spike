@@ -32,12 +32,12 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-	const scrollTo = (id: string) => {
-		const element = document.getElementById(id) as HTMLDivElement;
-		element.scrollIntoView({
-			behavior: "smooth",
-		});
-	};
+	// const scrollTo = (id: string) => {
+	// 	const element = document.getElementById(id) as HTMLDivElement;
+	// 	element.scrollIntoView({
+	// 		behavior: "smooth",
+	// 	});
+	// };
 
   const openLink = (url: string) => window.open(url)
 	// https://x.com/SpikeFurie

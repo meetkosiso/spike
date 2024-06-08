@@ -1,4 +1,4 @@
-import { withTranslation, TFunction, useTranslation } from "react-i18next";
+import {useTranslation } from "react-i18next";
 import { Container, TextWrapper, Content } from "./styles";
 
 interface Props {
