@@ -43,7 +43,7 @@ const Header = () => {
 					<Span>{t("About")}</Span>
 				</CustomNavLinkSmall>
 				<CustomNavLinkSmall
-					onClick={() => openLink("https://t.me/SpikeOfficialCTO")}
+					onClick={() => openLink("https://t.me/SpikeFurieOfficial")}
 				>
 					<Span>{t("Telegram")}</Span>
 				</CustomNavLinkSmall>
