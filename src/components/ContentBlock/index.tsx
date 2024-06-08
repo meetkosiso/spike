@@ -14,14 +14,13 @@ import {
   MinTitle,
   MinPara,
   StyledRow,
-  ButtonWrapper,
   SocialButton,
   SocialButtonContainer,
   ServiceWrapperContainer,
   ContractAddress,
   ContractAddressContainer,
 } from "./styles";
-import { url } from "inspector";
+
 
 const ContentBlock = ({
   icon,
@@ -81,7 +80,7 @@ const ContentBlock = ({
 										<SvgIcon src='dexscreener.svg' height='80' width='80' />
 									</SocialButton>
 									<SocialButton
-										onClick={() => openLink("https://t.me/SpikeOfficialCTO")}
+										onClick={() => openLink("https://t.me/SpikeFurieOfficial")}
 									>
 										<SvgIcon src='telegram.svg' height='80' width='80' />
 									</SocialButton>
@@ -92,7 +91,7 @@ const ContentBlock = ({
 											)
 										}
 									>
-										<SvgIcon src='etherscan.svg' height='53' width='53' />
+										<SvgIcon src='etherscan.svg' height='80' width='80' />
 									</SocialButton>
 								</SocialButtonContainer>
 							) : (
@@ -144,7 +143,7 @@ const ContentBlock = ({
 												)
 											}
 										>
-											{t("GRAP SOME TOKENS FOR YOUR SELF")}
+											{t("GRAB SOME TOKENS FOR YOURSELF")}
 										</Button>
 									)}
 								</ServiceWrapperContainer>

@@ -26,7 +26,7 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
 							{button && (
 								<Button
 									name='submit'
-									onClick={() => openLink("https://t.me/SpikeOfficialCTO")}
+									onClick={() => openLink("https://t.me/SpikeFurieOfficial")}
 								>
 									{t(button)}
 								</Button>

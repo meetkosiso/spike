@@ -19,8 +19,9 @@ export const Title = styled("h4")`
 export const NavLink = styled(Link)`
   display: block;
   font-size: 1rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0rem;
   transition: all 0.2s ease-in-out;
+  
 
   &:hover,
   &:active,
@@ -35,7 +36,7 @@ export const Extra = styled("section")`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
 `;
 
 export const LogoContainer = styled("div")`
@@ -89,12 +90,13 @@ export const Empty = styled("div")`
 
 export const FooterContainer = styled("div")`
   max-width: 510px;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
   transition: all 0.1s ease-in-out;
+  margin-bottom: 5px;
 
   a {
     &:hover,
@@ -167,4 +169,23 @@ export const LanguageSwitchContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   width: 85px;
+`;
+
+
+export const FooterText = styled("p")`
+	word-break: break-all;
+	text-align: center;
+	font-size: 12px;
+	color: #000;
+	text-transform: capitalize;
+	line-height: 24px;
+  
+`;
+
+
+export const FooterCardContainer = styled("div")`
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
 `;
