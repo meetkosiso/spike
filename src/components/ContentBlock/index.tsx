@@ -87,11 +87,11 @@ const ContentBlock = ({
 									<SocialButton
 										onClick={() =>
 											openLink(
-												"https://etherscan.io/token/0x19848077f45356b21164c412Eff3D3E4ff6Ebc31"
+												"https://www.dextools.io/app/en/ether/pair-explorer/0xb01cc2918234ec8e3fd649df395837ddc9b88353?t=1717962473020"
 											)
 										}
 									>
-										<SvgIcon src='etherscan.svg' height='80' width='80' />
+										<SvgIcon src='dextool.svg' height='80' width='80' />
 									</SocialButton>
 								</SocialButtonContainer>
 							) : (
@@ -125,9 +125,7 @@ const ContentBlock = ({
 									</ServiceWrapper>
 									{typeof section === "object" && (
 										<ContractAddressContainer>
-											<ContractAddress>
-												Contract Address:
-											</ContractAddress>
+											<ContractAddress>Contract Address:</ContractAddress>
 											<ContractAddress>
 												0x19848077f45356b21164c412Eff3D3E4ff6Ebc31
 											</ContractAddress>
